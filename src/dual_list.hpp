@@ -23,25 +23,40 @@
 #include "./dual_list.h"
 #include <vector>
 #include <string>
+#include <bits/stdc++.h>
 
+using std::pair;
 using std::string;
 using std::vector;
 
+ /*void troca(pair c) 
+{
+   int aux = *a;
+   *a = *b;
+   *b = aux;
+   } */
+ 
 template<class T1, class T2>
 DualList<T1, T2>::DualList() { }
 
 template<class T1, class T2>
 void DualList<T1, T2>::Insert(T1 x1, T2 x2) {
+  pair <T1, T2> c;
+  c.first = x1;
+  c.second = x2;
+  dual_list.push_back(c);
   return;
 }
 
 template<class T1, class T2>
 int DualList<T1, T2>::Size() const {
+  dual_list.size();
   return 0;
 }
 
 template<class T1, class T2>
 T2 DualList<T1, T2>::ExtractMinKey1() {
+  
   return T2();
 }
 
@@ -51,9 +66,29 @@ T1 DualList<T1, T2>::ExtractMinKey2() {
 }
 
 template<class T1, class T2>
-vector<string> DualList<T1, T2>::ListByKey1() const {
-  return vector<string>();
-}
+vector<string> DualList<T1, T2>::ListByKey1() const 
+{
+  vector<string> dual_list_string;
+  if (dual_list.size() > 0)
+  {
+    // Ordenando o vetor pela chave x1 utilizando o método bubbleSort
+    int n = dual_list.size();
+    int i, j; 
+    for (i = 0; i < n-1; i++)     
+      
+  { 
+    for (j = 0; j < n-i-1; j++) 
+      {  if (dual_list[j] > dual_list[j+1]) 
+        {
+
+      }
+      }}
+   
+   }
+   return dual_list_string;
+  }
+  
+
 
 template<class T1, class T2>
 vector<string> DualList<T1, T2>::ListByKey2() const {

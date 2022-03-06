@@ -25,12 +25,20 @@
 
 #include <vector>
 #include <string>
+#include <utility>
 
+
+using std::pair;
 using std::string;
 using std::vector;
 
 template<class T1, class T2>
 class DualList {
+  
+
+ private:
+ vector <pair <T1, T2>> dual_list;
+
  public:
   DualList();
 
